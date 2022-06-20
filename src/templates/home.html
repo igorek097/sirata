@@ -5,7 +5,7 @@
         <ul class="project-list">
             {% for project in projects %}
                 <li class="project-list-item">
-                    <a href="#" class="project-trigger" project="{{ project.1 }}">{{ project.0 }}</a>
+                    <a href="#" class="project-trigger" project="{{ project.id }}">{{ project.title }}</a>
                 </li>
             {% endfor %}
         </ul>

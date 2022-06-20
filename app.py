@@ -1,7 +1,7 @@
 from flask import Flask
 from src.views import views
 from config import app as app_config
-from config.contentful import client
+from config.contentful import get_entries
 
 
 app = Flask(
@@ -27,4 +27,5 @@ def project_content(project):
 
 @app.route('/test')
 def test():
+    projects = get_entries('project')
     import pdb; pdb.set_trace()
