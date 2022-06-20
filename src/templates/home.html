@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="home">
+        <ul class="project-list">
+            {% for project in projects %}
+                <li class="project-list-item">
+                    <a href="#" class="project-trigger" project="{{ project.1 }}">{{ project.0 }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}

@@ -1,0 +1,88 @@
+:root {
+    --color-black: rgb(0, 0, 0);
+    --font-poppins: 'Poppins';
+    --project-content-width: 40rem;
+}
+
+body {
+    font-family: var(--font-poppins);
+}
+
+a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.home {
+    color: var(--color-black);
+    /* font-size: calc(100vw / 1920 * 10); */
+}
+
+.project-list {
+    font-size: 8rem;
+    text-align: end;
+    top: 15vh;
+    padding: 2rem 2rem;
+    line-height: 8rem;
+} 
+
+
+#project-content {
+    position: absolute;
+    width: var(--project-content-width);
+    left: calc((100vw - var(--project-content-width))/2);
+    top: 10rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* .project {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 80vw;
+}
+
+.project-image-item {
+    position: relative;
+    margin-left: 20vw;
+}
+
+.project-video-item {
+    margin-left: 20vw;
+    z-index: 101;
+} */
+
+.about {
+    margin: 0 auto;
+    max-width: 100rem;
+    margin-bottom: 1rem;
+}
+
+.about-text {
+    margin-top: 3rem;
+}
+
+.about-contacts {
+    position: fixed;
+    left: 4rem;
+    bottom: 13rem;
+}
+
+.cover {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.fixed {
+    position: fixed;
+}
