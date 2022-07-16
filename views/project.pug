@@ -1,0 +1,9 @@
+block variables
+  - var template = 'project'
+
+each media in img
+  img.project_image_item(src=media.fields.file.url)
+
+//- each media in project.fields.videos
+//-   .project_video_item
+//-     video(src=media.video.url)

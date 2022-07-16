@@ -1,0 +1,13 @@
+extends base.pug
+
+block variables
+  - var template = 'about'
+
+block content
+  .about
+    .about__text
+      .text-m
+        p=about.data.about_text
+         
+  .about__contacts
+    p.text-m

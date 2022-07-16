@@ -1,0 +1,12 @@
+mixin renderProducts(projects)
+ h1 Products
+  .projects
+    for project in projects
+      +renderProduct(project)
+
+mixin renderProduct(project)
+    .product-in-list
+      .product-image
+        +renderImage(project.fields.image[0], product.fields.slug, 150)
+      .product-details
+        +renderProductDetails(project.fields)

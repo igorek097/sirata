@@ -1,0 +1,12 @@
+extends base.pug
+
+block variables
+  - var template = 'home'
+
+block content
+  .home
+    ul.project_list
+      each project in projects
+        li.project_list_item
+          span.project-trigger(href='#' project=project.sys.id)=project.fields.title
+
