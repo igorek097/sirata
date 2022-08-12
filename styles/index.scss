@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#project-view {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    flex-direction: column;
+}
+
+#project-view img {
+    margin: 0 auto;
+}
+
+#project-preview {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
+}
+
+#project-preview img {
+    max-width: 30%;
+}
+
+#project-view img {
+    max-width: 30%;
+}
+
+ul.project-list {
+    font-size: 70px;
+    position: fixed;
+}
+
+ul.project-list span {
+    cursor: pointer;
+}
+
+ul.project-list span.disabled {
+    color: gray;
+}
+

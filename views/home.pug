@@ -5,7 +5,7 @@ block variables
 
 block content
   .home
-    ul.project_list
+    ul.project-list
       each project in projects
         li.project_list_item
           span.project-trigger(href='#' project=project.sys.id)=project.fields.title

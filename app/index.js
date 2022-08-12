@@ -7,9 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
     links.forEach((val, key)=>{
         val.addEventListener('click', project_view)
     })
-    // links.forEach((val, key)=>{
-    //     val.addEventListener('mouseleave', project_hide)
-    // })
+
+    const project_view_item = document.getElementById('project-view')
+    project_view_item.addEventListener('click', (event) => {
+        event.target.innerHTML = ''
+        links.forEach((val, key) => {
+            if (val != event.target) {
+                val.classList.remove('disabled')
+            }
+        })
+    })
 })
 
 
@@ -20,8 +27,17 @@ function project_preview(event) {
 
 
 function project_view(event) {
+    const view = document.getElementById('project-preview')
+    view.innerHTML = ''
     const project = event.target.getAttribute('project')
     request_api('/project/' + project, show_project)
+    const links = document.querySelectorAll('.project-trigger')
+    links.forEach((val, key) => {
+        if (val != event.target) {
+            val.classList.add('disabled')
+        }
+    })
+
 }
 
 
@@ -32,15 +48,13 @@ function project_hide(event) {
 
 
 function show_preview(data) {
-    const container = document.getElementById('project-content')
-    container.style.display = 'inline'
+    const container = document.getElementById('project-preview')
     container.innerHTML = data
 }
 
 
 function show_project(data) {
-    const container = document.getElementById('project-content')
-    container.style.display = 'inline'
+    const container = document.getElementById('project-view')
     container.innerHTML = data
     const menu = document.querySelector('.background')
     menu.classList.add('fixed')
